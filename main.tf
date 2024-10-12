@@ -4,7 +4,7 @@ provider "aws" {
 
 resource "aws_instance" "lamp" {
   ami           = "ami-12345678" # Replace with the latest Amazon Linux AMI ID
-  instance_type = "t2.small"
+  instance_type = "t3.micro"
 
   tags = {
     Name = "My-LAMP-Instance"

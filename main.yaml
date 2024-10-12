@@ -5,7 +5,7 @@ Resources:
   LAMPInstance:
     Type: 'AWS::EC2::Instance'
     Properties:
-      InstanceType: t2.small
+      InstanceType: t3.micro
       ImageId: ami-12345678 # Replace with your preferred Amazon Linux AMI ID
       KeyName: your-key-pair # Replace with your key pair
       SecurityGroupIds:
