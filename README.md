@@ -22,7 +22,7 @@
 ---
 
 ## Overview
-This guide provides three different ways to deploy a LAMP stack (Linux, Apache, MySQL, PHP) on AWS: using AWS CloudFormation, Terraform, and the AWS CLI. Each method will deploy the same infrastructure for consistency, ensuring you can manage the stack in a uniform way regardless of the deployment method.
+This guide provides three different ways to deploy a **LAMP stack (Linux, Apache, MySQL, PHP)** on **AWS**: using **AWS CloudFormation**, **Terraform**, and the **AWS CLI**. Each method will deploy the same infrastructure for consistency, ensuring you can manage the stack in a uniform way regardless of the deployment method.
 
 <img width="738" alt="Screen Shot 2024-10-11 at 7 05 44 PM" src="https://github.com/user-attachments/assets/1c5b49f8-2d88-481f-84c4-a384274f468a">
 
@@ -63,7 +63,7 @@ This guide provides three different ways to deploy a LAMP stack (Linux, Apache, 
    - **DBName**: Your desired database name.
    - **Password**: A strong password for your database.
    - **DBUser**: Enter "admin" or your desired username.
-   - **Instance Type**: Select `t2.small` (or another type based on requirements).
+   - **Instance Type**: Select `t3.micro` (or another type based on requirements).
    - **Key Name**: Select an existing key pair for SSH access.
    - Click **Next**.
 6. **Configure Stack Options**: Configure options as needed, or leave them at default. Click **Next**.
@@ -80,7 +80,7 @@ The template `main.yaml` provisions an EC2 instance with a LAMP stack installed.
 
 ### Terraform Configuration
 1. **Install Terraform**: Ensure that Terraform is installed on your machine. Follow the [installation guide](https://learn.hashicorp.com/tutorials/terraform/install-cli) if needed.
-2. **Create a Terraform Configuration File**: Create a new file named `main.tf` (see **Terraform Configuration Reference** below).
+2. **Download the Terraform Configuration File**: The Terraform configuration file `main.tf` provisions the same EC2 instance and LAMP stack as CloudFormation.
 3. **Deploy with Terraform**:
    - Initialize Terraform by running:
      ```bash
@@ -96,9 +96,6 @@ The template `main.yaml` provisions an EC2 instance with a LAMP stack installed.
      ```
 4. **Access Your Application**: After deployment, retrieve the public IP of the instance from Terraform’s output and open it in a browser to access the LAMP application.
 
-### Terraform Configuration Reference
-The Terraform configuration file `main.tf` provisions the same EC2 instance and LAMP stack as CloudFormation. See the full file in the **Terraform File** section below.
-
 ---
 
 ## Manual Setup Using AWS CLI
@@ -106,7 +103,7 @@ The Terraform configuration file `main.tf` provisions the same EC2 instance and 
 ### Instructions
 1. **Launch EC2 Instance**: Use the following command to launch an EC2 instance with Amazon Linux 2:
    ```bash
-   aws ec2 run-instances --image-id ami-0abcdef1234567890 --instance-type t2.micro --key-name my-key --security-groups default
+   aws ec2 run-instances --image-id ami-0abcdef1234567890 --instance-type t3.micro --key-name my-key --security-groups default
    ```
 2. **Install LAMP Stack**:
    - SSH into your EC2 instance:
@@ -171,7 +168,7 @@ The Terraform configuration file `main.tf` provisions the same EC2 instance and 
 ---
 
 ## Conclusion
-This guide provides three methods to deploy a LAMP stack on AWS: CloudFormation, Terraform, and AWS CLI. Each approach is aligned to deploy the same stack, ensuring consistency across deployment strategies. Choose the one that best suits your workflow and requirements.
+This guide provides three methods to deploy a **LAMP stack** on **AWS**: CloudFormation, Terraform, and AWS CLI. Each approach is aligned to deploy the same stack, ensuring consistency across deployment strategies. Choose the one that best suits your workflow and requirements.
 
 ---
 
