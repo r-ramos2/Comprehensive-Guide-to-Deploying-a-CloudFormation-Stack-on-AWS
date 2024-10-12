@@ -64,7 +64,7 @@ This guide provides three different ways to deploy a **LAMP stack (Linux, Apache
    - **DBName**: Desired database name.
    - **Password**: A strong password for your database.
    - **DBUser**: (e.g., "admin").
-   - **Instance Type**: Select `t2.small` (or your preferred instance type).
+   - **Instance Type**: Select `t3.micro` (or your preferred instance type).
    - **Key Name**: Choose an existing key pair for SSH access.
    - Click **Next**.
 6. **Configure Stack Options**: Configure as needed or leave defaults, then click **Next**.
