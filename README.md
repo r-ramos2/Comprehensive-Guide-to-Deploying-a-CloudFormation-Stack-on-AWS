@@ -51,25 +51,26 @@ This guide provides three different ways to deploy a **LAMP stack (Linux, Apache
 
 ---
 
-## Deploying the Stack Using AWS CloudFormation
+### Deploying the Stack Using AWS CloudFormation
 
-### Step-by-Step Instructions
+**Step-by-Step Instructions:**
+
 1. **Open AWS CloudFormation**: Open AWS CloudFormation in a separate tab.
 2. **Create a Stack**: Click on **Create Stack**.
 3. **Prepare Template**: Under **Prerequisite - prepare template**, choose **Use a sample template**.
-4. **Select a Sample Template**: Choose anything under the **SIMPLE** category (e.g., LAMP Stack), optionally click on **View in designer** to see a preview of the template, then click **Next**.
-5. **Configure Stack Details**: Enter the following information:
-   - **Stack name**: Any name (e.g., My-LAMP-Stack-123456).
-   - **DBName**: Your desired database name.
+4. **Select a Sample Template**: Choose a template under the **SIMPLE** category (e.g., LAMP Stack). Optionally click **View in designer** to see a preview, then click **Next**.
+5. **Configure Stack Details**: Enter the following details:
+   - **Stack name**: (e.g., My-LAMP-Stack-123456).
+   - **DBName**: Desired database name.
    - **Password**: A strong password for your database.
-   - **DBUser**: Enter "admin" or your desired username.
-   - **Instance Type**: Select `t3.micro` (or another type based on requirements).
-   - **Key Name**: Select an existing key pair for SSH access.
+   - **DBUser**: (e.g., "admin").
+   - **Instance Type**: Select `t2.small` (or your preferred instance type).
+   - **Key Name**: Choose an existing key pair for SSH access.
    - Click **Next**.
-6. **Configure Stack Options**: Configure options as needed, or leave them at default. Click **Next**.
-7. **Review and Create**: Review the configurations, then click **Create stack**.
-8. **Wait for Completion**: Wait until the creation process is complete. Monitor the progress until the status shows **CREATE_COMPLETE**.
-9. **Access the Web Application**: Under the **Outputs** tab, open the **Website URL** value in a new tab to view your LAMP application.
+6. **Configure Stack Options**: Configure as needed or leave defaults, then click **Next**.
+7. **Review and Create**: Review the details and click **Create stack**.
+8. **Wait for Completion**: Monitor until the status is **CREATE_COMPLETE**.
+9. **Access the Web Application**: In the **Outputs** tab, open the **Website URL** to view the LAMP application.
 
 ### CloudFormation Template Reference
 The template `main.yaml` provisions an EC2 instance with a LAMP stack installed. See the full file contents in the **CloudFormation YAML File** section at the end of this guide.
