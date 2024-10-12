@@ -64,7 +64,7 @@ This guide provides three different ways to deploy a **LAMP stack (Linux, Apache
    - **DBName**: Desired database name.
    - **Password**: A strong password for your database.
    - **DBUser**: (e.g., "admin").
-   - **Instance Type**: Select `t3.micro` (or your preferred instance type).
+   - **Instance Type**: Select `t2.small` (or your preferred instance type).
    - **Key Name**: Choose an existing key pair for SSH access.
    - Click **Next**.
 6. **Configure Stack Options**: Configure as needed or leave defaults, then click **Next**.
@@ -104,7 +104,7 @@ The template `main.yaml` provisions an EC2 instance with a LAMP stack installed.
 ### Instructions
 1. **Launch EC2 Instance**: Use the following command to launch an EC2 instance with Amazon Linux 2:
    ```bash
-   aws ec2 run-instances --image-id ami-0abcdef1234567890 --instance-type t3.micro --key-name my-key --security-groups default
+   aws ec2 run-instances --image-id ami-0abcdef1234567890 --instance-type t2.small --key-name my-key --security-groups default
    ```
 2. **Install LAMP Stack**:
    - SSH into your EC2 instance:
