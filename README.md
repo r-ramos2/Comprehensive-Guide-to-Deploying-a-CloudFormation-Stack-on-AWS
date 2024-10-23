@@ -15,7 +15,7 @@
 9. [Security Best Practices](#security-best-practices)
 10. [Error Handling and Troubleshooting Tips](#error-handling-and-troubleshooting-tips)
 11. [Conclusion](#conclusion)
-12. [References](#references)
+12. [Resources](#resources)
 
 ---
 
@@ -171,7 +171,7 @@ This guide provides three methods to deploy a **LAMP stack** on **AWS**: CloudFo
 
 ---
 
-## References
+## Resources
 1. [AWS CloudFormation Documentation](https://docs.aws.amazon.com/cloudformation/index.html)
 2. [Terraform Documentation](https://www.terraform.io/docs/index.html)
 3. [AWS EC2 Documentation](https://docs.aws.amazon.com/ec2/index.html)
