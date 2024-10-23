@@ -16,8 +16,6 @@
 10. [Error Handling and Troubleshooting Tips](#error-handling-and-troubleshooting-tips)
 11. [Conclusion](#conclusion)
 12. [References](#references)
-13. [Terraform File](#terraform-file)
-14. [CloudFormation YAML File](#cloudformation-yaml-file)
 
 ---
 
